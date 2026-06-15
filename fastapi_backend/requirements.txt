@@ -1,0 +1,16 @@
+fastapi[standard]
+sqlmodel
+psycopg2-binary
+python-dotenv
+alembic
+pyjwt
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+mercadopago
+pydantic-settings
+python-multipart
+cloudinary
+slowapi
+pytest
+httpx
+meter

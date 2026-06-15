@@ -1,0 +1,20 @@
+# Node
+node_modules/
+frontend/node_modules/
+frontend-store/node_modules/
+package-lock.json
+pnpm-workspace.yaml
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Env
+.env
+
+
+# Build output
+frontend/dist/
+frontend-store/dist/
+
