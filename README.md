@@ -49,7 +49,7 @@ psql --version
 ## 2. Clonar el proyecto
 
 ```powershell
-git clone https://github.com/naromano/TrabajoIntegradorProg4BackendFrontend
+git clone https://github.com/naromano/TrabajoIntegradorProg4BackendFrontend.git
 cd TrabajoIntegradorProg4BackendFrontend
 git checkout main
 ```
