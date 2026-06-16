@@ -4,7 +4,8 @@
 **Universidad Tecnológica Nacional — Facultad Regional Mendoza**  
 **Tecnicatura Universitaria en Programación — 2026**
 
-**[Video demostración Yuotube](https://www.youtube.com/watch?v=nNBA_gMNkO8)**
+**[Video demostración Youtube](https://www.youtube.com/watch?v=nNBA_gMNkO8)**
+---
 **[Video demostración Google Drive](https://drive.google.com/drive/folders/1VISxnSXV2eN489ay0v_YJFUOKfbcTAAk?usp=sharing)**
 
 ---
