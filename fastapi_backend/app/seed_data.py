@@ -166,6 +166,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Margherita",
             "descripcion": "La clásica italiana con salsa de tomate, mozzarella fresca, albahaca y un toque de aceite de oliva extra virgen. Simple, auténtica y deliciosa.",
             "precio_base": 1100.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_clasicas.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -178,6 +179,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Pepperoni",
             "descripcion": "Cargada de pepperoni ahumado sobre una cama generosa de queso mozzarella derretido. La favorita de todos los tiempos.",
             "precio_base": 1300.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_clasicas.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -190,6 +192,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Napolitana",
             "descripcion": "Masa delgada y crujiente con salsa de tomate fresca, mozzarella derretida y rodajas de tomate natural. Un homenaje a Nápoles.",
             "precio_base": 1500.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_clasicas.id, True), (cat_premium.id, False)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -204,6 +207,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Hawaiana",
             "descripcion": "La polémica pero irresistible combinación de jamón cocido y piña natural sobre queso mozzarella fundido. Dulce y salada a la vez.",
             "precio_base": 1400.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_especiales.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -217,6 +221,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Cuatro Quesos",
             "descripcion": "Mozzarella, gorgonzola, parmesano y fontina se funden en una sinfonía de sabores. Para los verdaderos amantes del queso.",
             "precio_base": 1600.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_especiales.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -230,6 +235,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Supreme",
             "descripcion": "La pizza completa: pepperoni, carne molida, champiñones, cebolla y pimiento verde. Una explosión de sabores en cada bocado.",
             "precio_base": 1550.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_especiales.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -246,6 +252,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza BBQ Chicken",
             "descripcion": "Base de salsa barbacoa con pollo grillado, cebolla morada y queso cheddar. Una versión audaz y deliciosa.",
             "precio_base": 1450.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_especiales.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -260,6 +267,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Prosciutto",
             "descripcion": "Prosciutto di Parma, rúcula fresca y parmesano sobre mozzarella. La combinación italiana más elegante.",
             "precio_base": 1700.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_premium.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -274,6 +282,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Vegetariana",
             "descripcion": "Cargada de vegetales frescos: champiñones, pimiento, cebolla, aceitunas y tomate cherry. Sana y deliciosa.",
             "precio_base": 1350.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_especiales.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -291,6 +300,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Carnívora",
             "descripcion": "Para los amantes de la carne: pepperoni, jamón, tocino y carne molida sobre mozzarella. Pura proteína.",
             "precio_base": 1650.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_especiales.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -306,6 +316,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza de Anchoas",
             "descripcion": "Una pizza de sabor intenso con anchoas, aceitunas negras, ajo y orégano. Para paladares aventureros.",
             "precio_base": 1400.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_especiales.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -321,6 +332,7 @@ def _seed_productos(session: Session):
             "nombre": "Pizza Caprese",
             "descripcion": "Inspirada en la ensalada italiana: tomate cherry, mozzarella de búfala, albahaca fresca y reducción de aceto. Fresca y liviana.",
             "precio_base": 1500.00,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_premium.id, True)],
             "ingredientes": [
                 (masa.id, 1, um_pieza.id, False),
@@ -335,6 +347,7 @@ def _seed_productos(session: Session):
             "descripcion": "Refrescante bebida cola sabor original, ideal para acompañar tu pizza.",
             "precio_base": 400.00,
             "stock_cantidad": 100,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_bebidas.id, True)],
             "ingredientes": [],
         },
@@ -343,6 +356,7 @@ def _seed_productos(session: Session):
             "descripcion": "Agua mineral natural sin gas, pura y refrescante.",
             "precio_base": 300.00,
             "stock_cantidad": 100,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_bebidas.id, True)],
             "ingredientes": [],
         },
@@ -351,6 +365,7 @@ def _seed_productos(session: Session):
             "descripcion": "Cerveza artesanal estilo IPA con notas cítricas y lupuladas. Amargor balanceado.",
             "precio_base": 600.00,
             "stock_cantidad": 50,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_bebidas.id, True)],
             "ingredientes": [],
         },
@@ -359,6 +374,7 @@ def _seed_productos(session: Session):
             "descripcion": "Limonada casera con jugo de limón natural, azúcar orgánica y hojas de menta fresca.",
             "precio_base": 450.00,
             "stock_cantidad": 60,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_bebidas.id, True)],
             "ingredientes": [],
         },
@@ -367,6 +383,7 @@ def _seed_productos(session: Session):
             "descripcion": "El clásico postre italiano: capas de mascarpone, café espresso y cacao en polvo. Irresistible.",
             "precio_base": 800.00,
             "stock_cantidad": 30,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_postres.id, True)],
             "ingredientes": [],
         },
@@ -375,6 +392,7 @@ def _seed_productos(session: Session):
             "descripcion": "Brownie de chocolate caliente con helado de crema, salsa de chocolate y nueces tostadas.",
             "precio_base": 750.00,
             "stock_cantidad": 25,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_postres.id, True)],
             "ingredientes": [],
         },
@@ -383,6 +401,7 @@ def _seed_productos(session: Session):
             "descripcion": "Pan ciabatta tostado con manteca de ajo, perejil y un toque de parmesano. Crujiente y aromático.",
             "precio_base": 500.00,
             "stock_cantidad": 40,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_entradas.id, True)],
             "ingredientes": [],
         },
@@ -391,6 +410,7 @@ def _seed_productos(session: Session):
             "descripcion": "Bastones de queso mozzarella rebozados y fritos, servidos con salsa de tomate fresca. 6 unidades.",
             "precio_base": 650.00,
             "stock_cantidad": 40,
+            "imagenes_url": ["https://www.amitai.com/es/wp-content/uploads/2020/06/board-361516_1920.jpg"],
             "categorias": [(cat_entradas.id, True)],
             "ingredientes": [],
         },
@@ -406,6 +426,7 @@ def _seed_productos(session: Session):
             descripcion=pd["descripcion"],
             precio_base=pd["precio_base"],
             stock_cantidad=pd.get("stock_cantidad", 0),
+            imagenes_url=pd.get("imagenes_url", []),
         )
         session.add(producto)
         session.flush()

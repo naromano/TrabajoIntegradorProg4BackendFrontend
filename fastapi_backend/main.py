@@ -39,7 +39,7 @@ from app.seed_data import seed_all_data
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title="Parcial 2",
+        title="Trabajo Integrador Prog4 - Backend - Frontend",
         description="API REST ",
         version="1.0.0"
     )

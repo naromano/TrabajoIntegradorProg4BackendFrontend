@@ -9,6 +9,9 @@ import type { Producto, Categoria } from '../types'
 export default function Home() {
   const [search, setSearch] = useState('')
   const [categoriaId, setCategoriaId] = useState<number | ''>('')
+  const [categoriaSearchQuery, setCategoriaSearchQuery] = useState('')
+  const [categoriaSearchResults, setCategoriaSearchResults] = useState<Categoria[]>([])
+  const [hasSearchedCategorias, setHasSearchedCategorias] = useState(false)
   const [page, setPage] = useState(0)
   const limit = 12
   const [pedidoCreadoMsg, setPedidoCreadoMsg] = useState<string | null>(null)
@@ -53,6 +56,28 @@ export default function Home() {
 
   const productos: Producto[] = productosRes?.data?.data ?? []
   const categorias: Categoria[] = categoriasRes?.data?.data ?? []
+
+  const handleCategoriaSearch = () => {
+    const query = categoriaSearchQuery.trim().toLowerCase()
+    if (!query) {
+      setCategoriaSearchResults([])
+      setHasSearchedCategorias(false)
+      return
+    }
+    setHasSearchedCategorias(true)
+    const results = categorias.filter((cat) => cat.nombre.toLowerCase().includes(query))
+    setCategoriaSearchResults(results)
+  }
+
+  const handleSelectCategoria = (catId: number) => {
+    setCategoriaId(catId)
+    setCategoriaSearchQuery('')
+    setCategoriaSearchResults([])
+    setHasSearchedCategorias(false)
+    setPage(0)
+  }
+
+  const categoriaSeleccionada = categoriaId ? categorias.find(c => c.id === categoriaId) : null
 
   return (
     <div className="min-h-screen">
@@ -124,21 +149,73 @@ export default function Home() {
               className="w-full pl-12 pr-4 py-3 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent shadow-sm transition-all"
             />
           </div>
-          <select
-            value={categoriaId}
-            onChange={(e) => {
-              setCategoriaId(e.target.value ? Number(e.target.value) : '')
-              setPage(0)
-            }}
-            className="px-5 py-3 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm font-medium text-stone-700 cursor-pointer"
-          >
-            <option value="">Todas las categorías</option>
-            {categorias.map((cat) => (
-              <option key={cat.id} value={cat.id}>
-                {cat.nombre}
-              </option>
-            ))}
-          </select>
+          <div className="relative" style={{ minWidth: '250px' }}>
+            {categoriaSeleccionada ? (
+              <div className="flex items-center justify-between px-4 py-3 bg-green-50 border border-green-200 rounded-xl">
+                <span className="text-sm font-medium text-green-700">
+                  {categoriaSeleccionada.nombre}
+                </span>
+                <button
+                  onClick={() => {
+                    setCategoriaId('')
+                    setCategoriaSearchQuery('')
+                    setCategoriaSearchResults([])
+                    setHasSearchedCategorias(false)
+                    setPage(0)
+                  }}
+                  className="ml-2 text-green-500 hover:text-green-700 font-bold text-lg leading-none"
+                >
+                  ×
+                </button>
+              </div>
+            ) : (
+              <>
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    placeholder="Buscar categoría..."
+                    value={categoriaSearchQuery}
+                    onChange={(e) => {
+                      setCategoriaSearchQuery(e.target.value)
+                      setHasSearchedCategorias(false)
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault()
+                        handleCategoriaSearch()
+                      }
+                    }}
+                    className="flex-1 px-4 py-3 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent shadow-sm"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleCategoriaSearch}
+                    className="px-4 py-3 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-medium rounded-xl shadow-sm transition-all text-sm"
+                  >
+                    Buscar
+                  </button>
+                </div>
+                {categoriaSearchResults.length > 0 && (
+                  <div className="absolute z-10 mt-1 w-full bg-white border border-stone-200 rounded-xl shadow-lg max-h-48 overflow-y-auto">
+                    {categoriaSearchResults.map((cat) => (
+                      <div
+                        key={cat.id}
+                        onClick={() => handleSelectCategoria(cat.id)}
+                        className="px-4 py-2.5 hover:bg-orange-50 cursor-pointer border-b border-stone-100 last:border-0 text-sm text-stone-700 hover:text-orange-700 font-medium transition-colors"
+                      >
+                        {cat.nombre}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {hasSearchedCategorias && categoriaSearchResults.length === 0 && (
+                  <p className="absolute z-10 mt-1 w-full bg-white border border-stone-200 rounded-xl shadow-lg p-3 text-sm text-stone-400 text-center">
+                    No se encontraron categorías
+                  </p>
+                )}
+              </>
+            )}
+          </div>
         </div>
 
         {loadingProductos ? (

@@ -122,7 +122,7 @@ Las variables de MercadoPago, Cloudinary y WebSocket son opcionales para desarro
 
 ```powershell
 # Crear entorno virtual
-python -m venv .venv o py -m venv .venv
+py -3.13 -m venv .venv
 
 # Activar (Windows PowerShell)
 .\.venv\Scripts\Activate.ps1
