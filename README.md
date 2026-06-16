@@ -226,7 +226,7 @@ pnpm dev
 
 Disponible en **http://localhost:3001**
 
-**Login:** `admin@foodstore.com` / `Admin1234!` (o el que configuraste en `.env`)
+**Login:** `admin@admin.com` / `admin123` (o el que configuraste en `.env`)
 
 Secciones: Dashboard con gráficos, Productos, Categorías, Ingredientes, Pedidos, Usuarios.
 
